@@ -1,1 +1,88 @@
+Functional Requirements of Hotel Room Booking System
+The hotel needs to develop an online booking system with the following basic features:
+1. Browse and Search Available Rooms
+FR-1.1: Guests and members can browse the list of hotel rooms by room type.
+FR-1.2: Guests and members can search for available rooms by selecting check-in date, check-out date, and number of guests.
+FR-1.3: The application returns only rooms that are available during the selected stay period.
+FR-1.4: Guests and members can sort the room list by room price, room area, or maximum occupancy.
+2. View Room Details and Select Room
+FR-2.1: Guests and members can view detailed room information, including room number, room ID, room image, description, price per night, bed type, room status, and maximum occupancy.
+FR-2.2: Each room has one specific room type, such as Standard, Superior, Deluxe, or Suite.
+FR-2.3: Guests and members can select a room from the room list or the room detail page.
+FR-2.4: Members can proceed to the booking process after selecting a room.
+3. Complete Booking and Online Payment
+FR-3.1: Members must log in before completing the booking. New users can register an account before continuing the booking process.
+FR-3.2: Members can enter guest information, including full name, ID card or passport number, and phone number.
+FR-3.3: Members can enter guest information that is different from the account holder’s information.
+FR-3.4: The application calculates the total booking amount based on the room price per night and the number of nights.
+FR-3.5: Members must make the booking payment through online payment.
+FR-3.6: Members are redirected to the integrated payment gateway to process the online payment.
+FR-3.7: If online payment is successful, the application creates a new booking record and sets the booking status to New.
+FR-3.8: If online payment is successful, the application creates a payment record and sets the payment status to Paid.
+FR-3.9: If online payment fails, the application displays an error message and allows members to try the online payment again.
+FR-3.10: If online payment fails, the application does not create a booking record or payment record.
+FR-3.11: After a successful online payment, the new booking record includes room information, member information, guest information, check-in date, check-out date, number of nights, total amount, booking status, and payment status.
+FR-3.12: Members receive a booking confirmation email that includes the booking ID, stay details, booking status, and payment status.
+4. Register and Manage Member Account
+FR-4.1: New users can register a member account.
+FR-4.2: Member profiles include full name, date of birth, gender, address, phone number, password, and email address.
+FR-4.3: The member’s email address is used as the unique username for login and booking notifications.
+FR-4.4: Members can update their personal information, except for their login email address.
+FR-4.5: Members can recover their password through a new random password sent to their registered email address.
+5. View Booking History and Cancel Booking
+FR-5.1: Members can view their booking history.
+FR-5.2: Each booking shows a booking status, including New, Confirmed, Checked-in, Checked-out, and Cancelled.
+FR-5.3: Each booking shows a payment status, including Paid or Refund Pending if applicable.
+FR-5.4: Members can view the detailed information of each booking.
+FR-5.5: Members can cancel a booking if the booking status is New and the cancellation is made at least 24 hours before the check-in time.
+FR-5.6: If members cancel a booking with the payment status as Paid, the booking status is updated to Cancelled and the payment status is updated to Refund Pending.
+6. System Administration
+FR-6.1: Administrators must log in before accessing system administration functions.
+FR-6.2: Administrators can view, add, update, and delete room information.
+FR-6.3: Administrators can update room type information as part of room management, such as Standard, Superior, Deluxe, and Suite.
+FR-6.4: Administrators can manually update room status, such as Available, Occupied, Cleaning, or Maintenance.
+FR-6.5: Administrators can view the user list and search members by name, email, or phone number.
+FR-6.6: Administrators can lock or unlock user accounts when necessary.
+FR-6.7: Administrators can view all booking records.
+FR-6.8: Administrators can update booking status according to actual hotel operations, including Confirmed, Checked-in, Checked-out, and Cancelled.
+FR-6.9: Administrators can view booking reports, revenue reports, and room occupancy reports.
+		
+
+
+
+Non-Functional Requirements of Hotel Room Booking System
+Usability
+NFR-U1: The interface shall be responsive and able to adjust to different screen sizes.
+NFR-U2: Guests, members, and administrators shall be able to access their permitted functions through clear menus and buttons.
+NFR-U3: Members shall be able to complete the online booking and payment process through clearly labeled steps.
+NFR-U4: Administrators shall be able to access room management, user management, booking management, and report functions from the administrator dashboard.
+Reliability
+NFR-R1: The system shall maintain data integrity and consistency for member information, room information, booking records, and payment records.
+NFR-R2: The system shall prevent two members from booking the same room during the same stay period.
+NFR-R3: When an online payment is successful, the system shall create both a booking record and a payment record correctly.
+NFR-R4: If the online payment process fails, the system shall not create a booking record or payment record.
+NFR-R5: Booking status, payment status, and room status shall remain consistent after booking creation, cancellation, refund request, and administrator updates.
+Performance
+NFR-P1: The system shall return room search results within 3 seconds under normal testing conditions.
+NFR-P2: The system shall load room detail pages and booking pages within 3 seconds under normal testing conditions.
+NFR-P3: The system shall process common functions, such as login, registration, booking creation, and booking cancellation, within 3 seconds under normal testing conditions.
+NFR-P4: The system shall support multiple users using basic functions at the same time during student project testing.
+Supportability
+NFR-S1: The system shall be organized into clear modules, including account management, room management, booking management, online payment management, and administration management.
+NFR-S2: The database shall be designed with clear tables, including Members, Rooms, Bookings, and Payments.
+NFR-S3: The database tables shall use primary keys and foreign keys to maintain relationships between members, rooms, bookings, and payments.
+Security
+NFR-SE1: User passwords shall be stored in hashed or encrypted form instead of plain text.
+NFR-SE2: Members shall only be able to view and manage their own booking information.
+NFR-SE3: Administrators shall only be able to access management functions after logging in with an administrator account.
+NFR-SE4: The system shall validate user input to reduce common security risks such as SQL Injection and Cross-Site Scripting.
+NFR-SE5: Online payment shall be processed through an external payment gateway. The system shall not store sensitive card information directly in the database.
+Design Constraints
+NFR-D1: The system shall operate as a web-based hotel room booking application.
+NFR-D2: The user interface shall be developed using HTML5, CSS3, and JavaScript.
+NFR-D3: The server-side functions shall be developed using PHP.
+NFR-D4: The database shall be implemented using MySQL.
+NFR-D5: The system shall focus on basic hotel room booking functions for one hotel only.
+NFR-D6: The system shall support online payment only and shall not include payment at the hotel.
+
 
