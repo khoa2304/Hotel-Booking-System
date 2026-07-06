@@ -1,4 +1,4 @@
-Lucky Hotel Booking System
+# Lucky Hotel Booking System
 
 Web application implemented with Python, HTML5/CSS3, and PostgreSQL.
 
