@@ -32,4 +32,4 @@ Sample accounts are created by `seed_data.py`:
 
 - Member: `member@example.com` / `password123`
 - Admin: `admin@harborview.test` / `admin123`
-EADME.md…]()
+
