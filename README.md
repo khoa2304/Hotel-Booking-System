@@ -12,22 +12,6 @@ $env:HOTEL_DB_PASSWORD="khoa"
 
 Open `http://127.0.0.1:4180`.
 
-## External email and payment services
-
-Without external credentials, email and payment run in demo mode. To use real services, set:
-
-```powershell
-$env:HOTEL_SMTP_HOST="smtp.example.com"
-$env:HOTEL_SMTP_PORT="587"
-$env:HOTEL_SMTP_USERNAME="account@example.com"
-$env:HOTEL_SMTP_PASSWORD="app-password"
-$env:HOTEL_SMTP_FROM="account@example.com"
-$env:HOTEL_PAYMENT_GATEWAY_URL="https://gateway.example.com/payments"
-$env:HOTEL_PAYMENT_GATEWAY_TOKEN="gateway-token"
-```
-
-The payment endpoint must accept JSON containing `amount` and `reference`, then return a JSON `status` of `success`, `paid`, or `approved`.
-
 ## Run tests
 
 ```powershell
